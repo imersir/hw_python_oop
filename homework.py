@@ -43,9 +43,11 @@ class CashCalculator(Calculator):
     RUB_RATE = 1
 
     def get_today_cash_remained(self, currency):
-        currencies = {'usd': ('USD', CashCalculator.USD_RATE),
-                      'eur': ('Euro', CashCalculator.EURO_RATE),
-                      'rub': ('руб', CashCalculator.RUB_RATE)}
+        currencies = {
+            'usd': ('USD', CashCalculator.USD_RATE),
+            'eur': ('Euro', CashCalculator.EURO_RATE),
+            'rub': ('руб', CashCalculator.RUB_RATE)
+        }
         currency_title, currency_rate = currencies[currency]
         remainder = self.limit - self.get_today_stats()
         remainder_currency = round(remainder / currency_rate, 2)
