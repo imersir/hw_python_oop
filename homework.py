@@ -34,7 +34,7 @@ class CaloriesCalculator(Calculator):
         if total_calories > 0:
             return (f'Сегодня можно съесть что-нибудь ещё, но с общей '
                     f'калорийностью не более {total_calories} кКал')
-            return f'Хватит есть!'
+        return f'Хватит есть!'
 
 
 class CashCalculator(Calculator):
